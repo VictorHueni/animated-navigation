@@ -4,9 +4,9 @@
   --primaryColor: #fff;
   --navColor1: #408E2F ;
   --navColor2: #135A04 ;
-  --navColor3: #246B61 ;
-  --navColor4: #03443B ;
-  --navColor5: #81A035 ;
+  --navColor3: #267416 ;
+  --navColor4: #60A850 ;
+  --navColor5: #86C279 ;
 }
 
 /* Palette URL: http://paletton.com/#uid=52L0u0klllluEdzp+hsgGpec1t7 */
@@ -54,6 +54,86 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 
 }
+/* Nav menu items */
+nav, nav ul{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display:flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style-type: none;
+}
+
+nav ul li{
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a {
+  position: relative;
+  top:45%;
+  color:#fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav li a:hover{
+  transform: scale(1.2);
+}
+
+nav li a::before{
+  content: "";
+  width: 40vw;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+}
+
+nav li a:hover::before{
+  opacity: 1;
+}
+
+nav li a::after{
+  content: "";
+  width: 40vw;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  right: 0;
+  opacity: 0;
+}
+
+nav li a:hover::after{
+  opacity: 1;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+}
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+}
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+}
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+}
+
 
 /* --- Menu Bars ------------------------------------ */
 
